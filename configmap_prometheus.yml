@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: prome-theus
+  name: prom-k8s
 data:
   prometheus.yml: |
     global:
@@ -31,4 +31,3 @@ data:
             regex: '^/system\.slice/(.+)\.service$'
             target_label: systemd_service_name
             replacement: '${1}'
-
